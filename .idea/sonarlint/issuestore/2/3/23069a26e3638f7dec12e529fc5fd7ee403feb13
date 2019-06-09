@@ -1,0 +1,40 @@
+
+Esquid:S1989n""Add a "try/catch" block for "set".(ìåÔ†ıÿÿÿÿ8²ÚéØ³-
+[
+squid:S1065"9Replace this use of System.out or System.err by a logger.(ìßò©ùÿÿÿÿ8²ÚéØ³-
+usquid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(‡¡ş8²ÚéØ³-
+Jsquid:S1989k",Add a "try/catch" block for "setAccessible".(˜ÂÓ˜8²ÚéØ³-
+V
+squid:S106R"9Replace this use of System.out or System.err by a logger.(†Ğ©‹8²ÚéØ³-
+vsquid:S2226 "XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(™à»É8²ÚéØ³-
+Fsquid:S1148p"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²ÚéØ³-
+usquid:S3776w"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(•ÑãÖıÿÿÿÿ8–ÔÙ³-
+`squid:S1854„"<Remove this useless assignment to local variable "beanName".(ÁÖ–Óüÿÿÿÿ8…Û£Ù³-
+9squid:S3626q"Remove this redundant jump.(ÉŠ©ƒ8²ÚéØ³-
+Osquid:S1135"2Complete the task associated to this TODO comment.(£°§\8²ÚéØ³-
+v
+squid:S135_"YReduce the total number of break and continue statements in this loop to use at most one.(–õ­­8²ÚéØ³-
+{squid:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(¾«Öşüÿÿÿÿ8²ÚéØ³-
+Nsquid:S1989^"0Add a "try/catch" block for "getDeclaredFields".(Šêç–8²ÚéØ³-
+usquid:S2226""XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ÕÿóQ8²ÚéØ³-
+Isquid:S1989Ç"%Add a "try/catch" block for "doPost".(éöõ¦ùÿÿÿÿ8ªõ¤Ù³-
+Isquid:S1989Ç"%Add a "try/catch" block for "doPost".(éöõ¦ùÿÿÿÿ8ªõ¤Ù³-
+Lsquid:S1989Ò"(Add a "try/catch" block for "getWriter".(îñ¢‡øÿÿÿÿ8ªõ¤Ù³-
+Lsquid:S1989İ"(Add a "try/catch" block for "getWriter".(î›ºÓûÿÿÿÿ8ªõ¤Ù³-
+Isquid:S1989Š"%Add a "try/catch" block for "invoke".(áâ‚¨øÿÿÿÿ8ªõ¤Ù³-
+Isquid:S1989Š"%Add a "try/catch" block for "invoke".(áâ‚¨øÿÿÿÿ8ªõ¤Ù³-
+Isquid:S1989Š"%Add a "try/catch" block for "invoke".(áâ‚¨øÿÿÿÿ8ªõ¤Ù³-
+Gsquid:S1989Œ"(Add a "try/catch" block for "getWriter".(½ß«8ªõ¤Ù³-
+:squid:S3626—"Remove this redundant jump.(ÉŠ©ƒ8ªõ¤Ù³-
+:squid:S3626í"Remove this redundant jump.(ÉŠ©ƒ8ªõ¤Ù³-
+:squid:S3626ğ"Remove this redundant jump.(ÉŠ©ƒ8ªõ¤Ù³-
+w
+squid:S135é"YReduce the total number of break and continue statements in this loop to use at most one.(¹ÒĞ’8ªõ¤Ù³-
+Ssquid:S1481â"/Remove this unused "parametera" local variable.(ÒÕºışÿÿÿÿ8ªõ¤Ù³-
+qsquid:S3776Ö"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¸ÑÍ•8ªõ¤Ù³-
+fsquid:S00112’"FDefine and throw a dedicated exception instead of using a generic one.(–¦¾–8ªõ¤Ù³-
+Gsquid:S1185"(Remove this method to simply inherit it.(‚“¶î8ªõ¤Ù³-
+bsquid:S1854â">Remove this useless assignment to local variable "parametera".(ÒÕºışÿÿÿÿ8ªõ¤Ù³-
+Gsquid:S1148›"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ªõ¤Ù³-
+Gsquid:S1148Á"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ªõ¤Ù³-
+Gsquid:S1148Ñ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ªõ¤Ù³-

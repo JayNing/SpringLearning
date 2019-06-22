@@ -5,6 +5,12 @@ import com.jayning.spring.annotation.JNController;
 import com.jayning.spring.annotation.JNRequestMapping;
 import com.jayning.spring.annotation.JNRequestParam;
 import com.jayning.spring.demo.service.UserService;
+import com.jayning.spring.framework.context.JNApplicationContext;
+import com.jayning.spring.framework.webmvc.servlet.JNModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
  * @Author JAY
@@ -26,6 +32,22 @@ public class TestController {
     @JNRequestMapping("add")
     public String addUser(@JNRequestParam("name") String name,@JNRequestParam("password") String password){
         return userService.addUser(name,password);
+    }
+
+    @JNRequestMapping("/query.json")
+    public JNModelAndView query(HttpServletRequest request, HttpServletResponse response,
+                                @JNRequestParam("name") String name){
+        String result = userService.query(name);
+        return out(response,result);
+    }
+
+    private JNModelAndView out(HttpServletResponse resp,String str){
+        try {
+            resp.getWriter().write(str);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

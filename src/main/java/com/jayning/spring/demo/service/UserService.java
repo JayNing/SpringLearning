@@ -7,4 +7,6 @@ package com.jayning.spring.demo.service;
  **/
 public interface UserService {
     String addUser(String username,String password);
+
+    String query(String name);
 }

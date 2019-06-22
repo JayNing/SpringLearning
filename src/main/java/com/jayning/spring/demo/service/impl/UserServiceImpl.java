@@ -15,4 +15,9 @@ public class UserServiceImpl implements UserService {
     public String addUser(String username, String password) {
         return "Add new user, the name is " + username + " and password is " + password;
     }
+
+    @Override
+    public String query(String name) {
+        return "username: 宁";
+    }
 }

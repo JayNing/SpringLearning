@@ -6,7 +6,7 @@
     <display-name>JayNing Web Application</display-name>
     <servlet>
         <servlet-name>jnmvc</servlet-name>
-        <servlet-class>com.jayning.spring.dispatcher.JNDispatcherServlet</servlet-class>
+        <servlet-class>com.jayning.spring.framework.webmvc.servlet.JNDispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>application.properties</param-value>

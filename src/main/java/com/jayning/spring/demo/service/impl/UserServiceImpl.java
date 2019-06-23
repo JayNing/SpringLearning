@@ -18,6 +18,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String query(String name) {
+        System.out.println("调用的query方法");
         return "username: 宁";
     }
 }

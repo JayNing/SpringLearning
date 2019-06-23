@@ -3,6 +3,11 @@ package com.jayning.spring.framework.context;
 import com.jayning.spring.annotation.JNAutowired;
 import com.jayning.spring.annotation.JNController;
 import com.jayning.spring.annotation.JNService;
+import com.jayning.spring.framework.aop.JNAopProxy;
+import com.jayning.spring.framework.aop.JNCglibAopProxy;
+import com.jayning.spring.framework.aop.JNJdkDynamicAopProxy;
+import com.jayning.spring.framework.aop.config.JNAopConfig;
+import com.jayning.spring.framework.aop.support.JNAdvisedSupport;
 import com.jayning.spring.framework.beans.factory.JNBeanFactory;
 import com.jayning.spring.framework.beans.factory.JNBeanWrapper;
 import com.jayning.spring.framework.beans.factory.config.JNBeanDefinition;
@@ -125,10 +130,40 @@ public class JNApplicationContext extends JNDefaultListableBeanFactory implement
             //此处省略单例的判断，如果是单例，则先去单例缓存中取，如果没取到，通过反射生成一个，再把生成的放入单例缓存
             Class<?> clazz = Class.forName(className);
             instance = clazz.newInstance();
+
+            //SpringAOP
+            JNAdvisedSupport config = instantionAopConfig(beanDefinition);
+            config.setTargetClass(clazz);
+            config.setTarget(instance);
+
+            //符合PointCut的规则的话，闯将代理对象
+            if(config.pointCutMatch()) {
+                instance = createProxy(config).getProxy();
+            }
+
         }catch (Exception e){
             e.printStackTrace();
         }
         return instance;
+    }
+
+    private JNAopProxy createProxy(JNAdvisedSupport config) {
+        Class targetClass = config.getTargetClass();
+        if(targetClass.getInterfaces().length > 0){
+            return new JNJdkDynamicAopProxy(config);
+        }
+        return new JNCglibAopProxy(config);
+    }
+
+    private JNAdvisedSupport instantionAopConfig(JNBeanDefinition gpBeanDefinition) {
+        JNAopConfig config = new JNAopConfig();
+        config.setPointCut(this.reader.getConfig().getProperty("pointCut"));
+        config.setAspectClass(this.reader.getConfig().getProperty("aspectClass"));
+        config.setAspectBefore(this.reader.getConfig().getProperty("aspectBefore"));
+        config.setAspectAfter(this.reader.getConfig().getProperty("aspectAfter"));
+        config.setAspectAfterThrow(this.reader.getConfig().getProperty("aspectAfterThrow"));
+        config.setAspectAfterThrowingName(this.reader.getConfig().getProperty("aspectAfterThrowingName"));
+        return new JNAdvisedSupport(config);
     }
 
     @Override
